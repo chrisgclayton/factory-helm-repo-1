@@ -1,0 +1,51 @@
+apiVersion: v1
+entries:
+  factory-app-1:
+  - apiVersion: v2
+    appVersion: 1.1.5
+    created: "2022-03-13T14:33:54.849498389Z"
+    description: A Helm chart that represents the first application on the factory
+      floor of the future
+    digest: aca875be05eed6b68c6ab909d5fa7f3c3c620862fa6e00e6504080f8c4b7c898
+    name: factory-app-1
+    type: application
+    urls:
+    - https://github.com/chrisgclayton/factory-helm-repo-1/releases/download/factory-app-1-0.1.0/factory-app-1-0.1.0.tgz
+    version: 0.1.0
+  factory-infra-1:
+  - apiVersion: v2
+    appVersion: 1.1.0
+    created: "2022-03-13T14:33:54.997681193Z"
+    description: A Helm chart that represents the first infrastructure components
+      on the factory floor of the future
+    digest: 981cf95aa3026ad469354129c6ea281c9ca1b478b2aa4bbf8bfba9bb8b2fedd4
+    name: factory-infra-1
+    type: application
+    urls:
+    - https://github.com/chrisgclayton/factory-helm-repo-1/releases/download/factory-infra-1-0.1.0/factory-infra-1-0.1.0.tgz
+    version: 0.1.0
+  factory-oper-1:
+  - apiVersion: v2
+    appVersion: 1.0.5
+    created: "2022-03-13T14:33:55.163722031Z"
+    description: A Helm chart that represents the first infrastructure components
+      on the factory floor of the future
+    digest: 85faa137570c1f6a92addee5b0b4e3514f770465bb2e90caa235286ed9aaca8f
+    name: factory-oper-1
+    type: application
+    urls:
+    - https://github.com/chrisgclayton/factory-helm-repo-1/releases/download/factory-oper-1-0.1.0/factory-oper-1-0.1.0.tgz
+    version: 0.1.0
+  factory-strat-1:
+  - apiVersion: v2
+    appVersion: 1.5.0
+    created: "2022-03-13T14:33:55.32465793Z"
+    description: A Helm chart that represents the first infrastructure components
+      on the factory floor of the future
+    digest: ba22d75de57a905b9e820dbad57b867829f6b8b504ab0ae3d8be116b83e67c86
+    name: factory-strat-1
+    type: application
+    urls:
+    - https://github.com/chrisgclayton/factory-helm-repo-1/releases/download/factory-strat-1-0.1.0/factory-strat-1-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-03-13T14:33:55.32466433Z"
