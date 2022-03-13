@@ -1,0 +1,12 @@
+# Default values for factory-app-1.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+namespace: "demo-central"
+environment: "base"
+image:
+  repository: "cgcregistry1.azurecr.io"
+  name: "busybox"
+  tag: "001"
+  pullSecret: "regcred"
+

@@ -1,0 +1,6 @@
+# Default values for factory-oper-1.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+namespace: "demo-central-oper"
+

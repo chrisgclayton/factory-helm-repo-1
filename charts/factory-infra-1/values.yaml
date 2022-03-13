@@ -1,0 +1,9 @@
+# Default values for factory-infra-1.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+namespace: "demo-central"
+environment: "base"
+pullSecret:
+  content: "ewoJImF1dGhzIjogewoJCSJjZ2NyZWdpc3RyeTEuYXp1cmVjci5pbyI6IHsKCQkJImF1dGgiOiAiWTJkalVtVm5hWE4wY25reE9tOTVSa1kxUWprclRVcFdNbGt5WlZrdk1YRnpQV05uYkZwQlpHUmhkbFowIgoJCX0KCX0KfQ=="
+  name: "regcred"

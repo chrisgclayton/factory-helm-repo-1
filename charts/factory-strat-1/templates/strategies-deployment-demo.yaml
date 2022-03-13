@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo-opc-strategies
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: demo-app-strategy
+    environment: {{ .Values.environment }}
+
+spec:
+  containers:
+    - name: demo-opc-strategies-container
+      image: {{ .Values.image.repository }}/{{ .Values.image.name }}:{{ .Values.image.tag }}
+      env:
+      - name: ConfigurationName
+        value: "This is {{ .Values.environment }}"
+      - name: Processing__ProductName
+        value: "{{ .Values.strategy.processing.productName }}"
+      - name: Processing__Recipe
+        value: "{{ .Values.strategy.processing.recipe }}"
+      - name: Processing__Modifications
+        value: "{{ .Values.strategy.processing.modification }}"
+      - name: Packing__FormFactor
+        value: "{{ .Values.strategy.packing.formFactor }}"
+      - name: Packing__Size
+        value: "{{ .Values.strategy.packing.size }}"
+      - name: Environment__Name
+        value: "{{ .Values.environment }}"
+  imagePullSecrets:
+  - name: {{ .Values.pullSecret.name }}

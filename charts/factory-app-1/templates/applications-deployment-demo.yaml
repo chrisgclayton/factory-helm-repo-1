@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo-busy-pod
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: demo-app
+    environment: {{ .Values.environment }}
+
+spec:
+  containers:
+    - name: demo-busy-container
+      image: {{ .Values.image.repository }}/{{ .Values.image.name }}:{{ .Values.image.tag }}
+      env:
+      - name: ConfigurationName
+        value: "This is the {{ .Values.environment }}"
+  imagePullSecrets:
+  - name: {{ .Values.image.pullSecret }}
