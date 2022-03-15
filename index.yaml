@@ -25,6 +25,17 @@ entries:
     version: 0.1.0
   factory-infra-1:
   - apiVersion: v2
+    appVersion: 2.1.0
+    created: "2022-03-15T17:06:37.040173164Z"
+    description: A Helm chart that represents the first infrastructure components
+      on the factory floor of the future
+    digest: e6a487590280911324744e29933c25114e8d5b31bb9a7a5de864035969500fd2
+    name: factory-infra-1
+    type: application
+    urls:
+    - https://github.com/chrisgclayton/factory-helm-repo-1/releases/download/factory-infra-1-2.0.0/factory-infra-1-2.0.0.tgz
+    version: 2.0.0
+  - apiVersion: v2
     appVersion: 1.6.0
     created: "2022-03-13T16:19:17.572446625Z"
     description: A Helm chart that represents the first infrastructure components
@@ -92,4 +103,4 @@ entries:
     urls:
     - https://github.com/chrisgclayton/factory-helm-repo-1/releases/download/factory-strat-1-0.1.0/factory-strat-1-0.1.0.tgz
     version: 0.1.0
-generated: "2022-03-13T16:19:17.835177632Z"
+generated: "2022-03-15T17:06:37.040195865Z"
