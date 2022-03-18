@@ -26,11 +26,17 @@ spec:
         - name: Environment__Name
           value: "{{ .Values.environment }}"
         volumeMounts:
-        - mountPath: /config
+        - mountPath: /config/packing
           name: packingconfig
+        - mountPath: /config/processing
+          name: processingconfig
       imagePullSecrets:
       - name: {{ .Values.pullSecret.name }}
       volumes:
       - name: packingconfig
         configMap:
           name: packing-config
+      - name: processingconfig
+        configMap:
+          name: processing-config
+
