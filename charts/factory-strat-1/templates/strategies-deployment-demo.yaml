@@ -28,8 +28,10 @@ spec:
         volumeMounts:
         - mountPath: /config/packing
           name: packingconfig
+          readOnly: false
         - mountPath: /config/processing
           name: processingconfig
+          readOnly: false
       imagePullSecrets:
       - name: {{ .Values.pullSecret.name }}
       volumes:
