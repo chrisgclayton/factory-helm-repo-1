@@ -14,17 +14,20 @@ spec:
       env:
       - name: ConfigurationName
         value: "This is {{ .Values.environment }}"
-      - name: Processing__ProductName
-        value: "{{ .Values.strategy.processing.productName }}"
-      - name: Processing__Recipe
-        value: "{{ .Values.strategy.processing.recipe }}"
-      - name: Processing__Modifications
-        value: "{{ .Values.strategy.processing.modification }}"
-      - name: Packing__FormFactor
-        value: "{{ .Values.strategy.packing.formFactor }}"
-      - name: Packing__Size
-        value: "{{ .Values.strategy.packing.size }}"
       - name: Environment__Name
         value: "{{ .Values.environment }}"
   imagePullSecrets:
   - name: {{ .Values.pullSecret.name }}
+  volumes:
+    - name: packingConfig
+      configMap:
+        name: demo-central-packing-config
+        items:
+        - key: "line.packing.properties"
+          path: "line.packing.properties"
+    - name: processingConfig
+      configMap:
+        name: demo-central-processing-config
+        items:
+        - key: "line.processing.properties"
+          path: "line.processing.properties"
