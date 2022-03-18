@@ -14,11 +14,3 @@ pullSecret:
   content: "ewoJImF1dGhzIjogewoJCSJjZ2NyZWdpc3RyeTEuYXp1cmVjci5pbyI6IHsKCQkJImF1dGgiOiAiWTJkalVtVm5hWE4wY25reE9tOTVSa1kxUWprclRVcFdNbGt5WlZrdk1YRnpQV05uYkZwQlpHUmhkbFowIgoJCX0KCX0KfQ=="
   name: "regcred"
 
-strategy:
-  processing:   
-    productName: "none"
-    recipe: "0"
-    modification: "0"
-  packing:
-    formFactor: "0"
-    size: "0"
