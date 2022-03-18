@@ -16,25 +16,25 @@ spec:
         value: "This is {{ .Values.environment }}"
       - name: Environment__Name
         value: "{{ .Values.environment }}"
-      volumeMounts:
-      - name: packingConfig
-        mountPath: "/config/packing"
-        readOnly: false
-      - name: processingConfig
-        mountPath: "/config/processing"
-        readOnly: false
+#      volumeMounts:
+#      - name: packingConfig
+#        mountPath: "/config/packing"
+#        readOnly: false
+#      - name: processingConfig
+#        mountPath: "/config/processing"
+#        readOnly: false
   imagePullSecrets:
   - name: {{ .Values.pullSecret.name }}
-  volumes:
-    - name: packingConfig
-      configMap:
-        name: packing-config
-        items:
-        - key: "line.packing.properties"
-          path: "line.packing.properties"
-    - name: processingConfig
-      configMap:
-        name: processing-config
-        items:
-        - key: "line.processing.properties"
-          path: "line.processing.properties"
+#  volumes:
+#    - name: packingConfig
+#      configMap:
+#        name: packing-config
+#        items:
+#        - key: "line.packing.properties"
+#          path: "line.packing.properties"
+#    - name: processingConfig
+#      configMap:
+#        name: processing-config
+#        items:
+#        - key: "line.processing.properties"
+#          path: "line.processing.properties"
