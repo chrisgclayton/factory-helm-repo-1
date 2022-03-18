@@ -25,12 +25,15 @@ spec:
           value: "This is {{ .Values.environment }}"
         - name: Environment__Name
           value: "{{ .Values.environment }}"
-#        volumeMounts:
-#        - mountPath: /config
-#          name: packingconfig
+        volumeMounts:
+        - mountPath: /config
+          name: packingconfig
       imagePullSecrets:
       - name: {{ .Values.pullSecret.name }}
-
+      volumes:
+      - name: packingconfig
+        configMap:
+        name: packing-config
   
 
 # apiVersion: v1
