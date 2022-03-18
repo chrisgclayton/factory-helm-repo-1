@@ -20,14 +20,14 @@ spec:
       containers:
       - name: demo-opc-strategies-container
         image: {{ .Values.image.repository }}/{{ .Values.image.name }}:{{ .Values.image.tag }}
-      env:
-      - name: ConfigurationName
-        value: "This is {{ .Values.environment }}"
-      - name: Environment__Name
-        value: "{{ .Values.environment }}"
-#      volumeMounts:
-#      - mountPath: /config
-#        name: packingconfig
+        env:
+        - name: ConfigurationName
+          value: "This is {{ .Values.environment }}"
+        - name: Environment__Name
+          value: "{{ .Values.environment }}"
+#        volumeMounts:
+#        - mountPath: /config
+#          name: packingconfig
       imagePullSecrets:
       - name: {{ .Values.pullSecret.name }}
 
