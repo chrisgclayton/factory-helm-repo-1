@@ -11,11 +11,15 @@ spec:
   containers:
     - name: demo-opc-strategies-container
       image: {{ .Values.image.repository }}/{{ .Values.image.name }}:{{ .Values.image.tag }}
+      volumeMounts:
+      - mountPath: /config
+        name: packingconfig
       env:
       - name: ConfigurationName
         value: "This is {{ .Values.environment }}"
       - name: Environment__Name
         value: "{{ .Values.environment }}"
+
 #      volumeMounts:
 #      - name: config
 #        mountPath: "/config"
@@ -23,15 +27,19 @@ spec:
 #      - name: processingConfig
 #        mountPath: "/config/processing"
 #        readOnly: false
-  imagePullSecrets:
-  - name: {{ .Values.pullSecret.name }}
   volumes:
-    - name: config
+    - name: packingconfig
       configMap:
         name: packing-config
-        items:
-        - key: "line"
-          path: "line"
+  imagePullSecrets:
+  - name: {{ .Values.pullSecret.name }}
+#  volumes:
+#    - name: config
+#      configMap:
+#        name: packing-config
+#        items:
+#        - key: "line"
+#          path: "line"
 #    - name: processingConfig
 #      configMap:
 #        name: processing-config
