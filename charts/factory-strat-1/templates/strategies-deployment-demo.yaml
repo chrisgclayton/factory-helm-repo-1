@@ -16,10 +16,10 @@ spec:
         value: "This is {{ .Values.environment }}"
       - name: Environment__Name
         value: "{{ .Values.environment }}"
-      volumeMounts:
-      - name: config
-        mountPath: "/config"
-        readOnly: false
+#      volumeMounts:
+#      - name: config
+#        mountPath: "/config"
+#        readOnly: false
 #      - name: processingConfig
 #        mountPath: "/config/processing"
 #        readOnly: false
