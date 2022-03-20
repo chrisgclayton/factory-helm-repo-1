@@ -8,7 +8,7 @@ environment: "specific"
 image:
   repository: "cgcregistry1.azurecr.io"
   name: "line-configuration-manager"
-  tag: "001"
+  tag: "002"
 
 pullSecret:
   content: "ewoJImF1dGhzIjogewoJCSJjZ2NyZWdpc3RyeTEuYXp1cmVjci5pbyI6IHsKCQkJImF1dGgiOiAiWTJkalVtVm5hWE4wY25reE9tOTVSa1kxUWprclRVcFdNbGt5WlZrdk1YRnpQV05uYkZwQlpHUmhkbFowIgoJCX0KCX0KfQ=="
