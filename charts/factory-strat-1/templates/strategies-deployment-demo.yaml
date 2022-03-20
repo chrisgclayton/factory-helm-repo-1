@@ -23,13 +23,29 @@ spec:
         env:
         - name: ConfigurationName
           value: "This is {{ .Values.environment }}"
+        - name: Configuration__Directory
+          value: "{{ .Values.lineConfiguration.configurationDirectory }}"
+        - name: Configuration__UseWatcher
+          value: "{{ .Values.lineConfiguration.useWatcher }}"
+        - name: Packing__Host
+          value: "{{ .Values.lineConfiguration.packing.host }}"
+        - name: Packing__Port
+          value: "{{ .Values.lineConfiguration.packing.port }}"
+        - name: Packing__File
+          value: "{{ .Values.lineConfiguration.packing.file }}"
+        - name: Processing__Host
+          value: "{{ .Values.lineConfiguration.processing.host }}"
+        - name: Processing__Port
+          value: "{{ .Values.lineConfiguration.processing.port }}"
+        - name: Processing__File
+          value: "{{ .Values.lineConfiguration.processing.file }}"
         - name: Environment__Name
           value: "{{ .Values.environment }}"
         volumeMounts:
-        - mountPath: /config/packing
+        - mountPath: /app/lines/packing
           name: packingconfig
           readOnly: false
-        - mountPath: /config/processing
+        - mountPath: /app/lines/processing
           name: processingconfig
           readOnly: false
       imagePullSecrets:

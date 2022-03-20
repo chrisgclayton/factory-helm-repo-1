@@ -7,10 +7,21 @@ environment: "specific"
 
 image:
   repository: "cgcregistry1.azurecr.io"
-  name: "busybox"
+  name: "line-configuration-manager"
   tag: "001"
 
 pullSecret:
   content: "ewoJImF1dGhzIjogewoJCSJjZ2NyZWdpc3RyeTEuYXp1cmVjci5pbyI6IHsKCQkJImF1dGgiOiAiWTJkalVtVm5hWE4wY25reE9tOTVSa1kxUWprclRVcFdNbGt5WlZrdk1YRnpQV05uYkZwQlpHUmhkbFowIgoJCX0KCX0KfQ=="
   name: "regcred"
 
+lineConfiguration:
+  configurationDirectory: "/app/lines"
+  useWatcher: "true"
+  packing:
+    host: "localhost"
+    port: "4840"
+    file: "packing.json"
+  processing:
+    host: "localhost"
+    port: "4840"
+    file: "processing.json"
